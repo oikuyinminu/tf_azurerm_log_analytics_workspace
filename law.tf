@@ -1,10 +1,10 @@
 # Resource Group
-resource "azurerm_resource_group" "law" {
-  name     = local.resource_group_name
-  location = var.location
+# resource "azurerm_resource_group" "law" {
+#   name     = local.resource_group_name
+#   location = var.location
 
-  tags = local.tags
-}
+#   tags = local.tags
+# }
 
 # Create a Log Analytics Workspace
 

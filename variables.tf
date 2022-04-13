@@ -12,19 +12,6 @@ variable "resource_group_name" {
   description = "Name of resource group into which VM is deployed."
   type        = string
 }
-
-variable "create_auto_acct" {
-  description = "Flag to indicate if Automation Account should be created. Default to true"
-  type        = bool
-  default     = true
-}
-
-variable "law" {
-  description = "Map of the Log Analytics Workspace to be created"
-  type        = map(map(string))
-  default     = {}
-}
-
 variable "required_tags" {
   description = "Optional - tags to apply on resource"
   type = object({
