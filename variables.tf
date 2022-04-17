@@ -56,7 +56,7 @@ variable "retention_in_days" {
 variable "linked_service_name" {
   description = "(Optional) Name of Linked Service to the Log Workplace"
   type = string
-  default = "Automation"
+  default = [automation_cluster]
 }
 
 variable "linked_service_resource" {
