@@ -24,7 +24,7 @@ resource "azurerm_log_analytics_workspace" "law" {
 resource "azurerm_log_analytics_linked_service" "law_auto" {
   count = var.linked_service_resource.enable ? 1 : 0
 
-  linked_service_name = var.linked_service_name
+  # linked_service_name = var.linked_service_name
   resource_group_name = var.resource_group_name
   workspace_id        = azurerm_log_analytics_workspace.law.id
   resource_id         = var.linked_service_resource.id

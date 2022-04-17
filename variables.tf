@@ -53,11 +53,11 @@ variable "retention_in_days" {
     default = 30
 }
 
-variable "linked_service_name" {
-  description = "(Optional) Name of Linked Service to the Log Workplace"
-  type = string
-  default = [automation_cluster]
-}
+# variable "linked_service_name" {
+#   description = "(Optional) Name of Linked Service to the Log Workplace"
+#   type = string
+#   default = [automation_cluster]
+# }
 
 variable "linked_service_resource" {
  description = "(Optional) Enables Link service to the Log Workspace"
