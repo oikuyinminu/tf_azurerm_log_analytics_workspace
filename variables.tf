@@ -52,3 +52,26 @@ variable "retention_in_days" {
     type = number
     default = 30
 }
+
+variable "linked_service_name" {
+  description = "(Optional) Name of Linked Service to the Log Workplace"
+  type = string
+  default = "LogAutomation"
+}
+
+variable "linked_service_resource" {
+ description = "(Optional) Enables Link service to the Log Workspace"
+ type = object({
+   enable = bool
+   id = string
+ })
+ default = {
+   enable = false
+   id = null
+ }
+
+ validation {
+   condition = can(regex("^(?i:/subscriptions/.+?/resourceGroups/.+?/providers/Microsoft.Automation/automationAccounts/.+|null))$", format("%v", var.linked_service_resource.id)))
+   error_message = "Automation Account ID is invalid"
+ }
+}
