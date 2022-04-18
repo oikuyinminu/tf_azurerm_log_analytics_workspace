@@ -27,5 +27,5 @@ resource "azurerm_log_analytics_linked_service" "law_auto" {
   # linked_service_name = var.linked_service_name
   resource_group_name = var.resource_group_name
   workspace_id        = azurerm_log_analytics_workspace.law.id
-  resource_id         = var.linked_service_resource.id
+  read_access_id         = var.linked_service_resource.id
 }
