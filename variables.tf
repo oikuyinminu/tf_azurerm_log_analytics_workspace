@@ -70,8 +70,8 @@ variable "linked_service_resource" {
    id = null
  }
 
- validation {
-   condition = can(regex("^(?i:/subscriptions/.+?/resourceGroups/.+?/providers/Microsoft.Automation/automationAccounts/.+|null))$", format("%v", var.linked_service_resource.id)))
-   error_message = "Automation Account ID is invalid."
- }
+#  validation {
+#    condition = can(regex("^(?i:/subscriptions/.+?/resourceGroups/.+?/providers/Microsoft.Automation/automationAccounts/.+|null))$", format("%v", var.linked_service_resource.id)))
+#    error_message = "Automation Account ID is invalid."
+#  }
 }
